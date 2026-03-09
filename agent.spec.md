@@ -12,7 +12,7 @@ Next.js 15 · TypeScript · Git · GitHub
 
 ## Student Prompt
 
-Copy and paste this into Claude Code (or your AI tool of choice):
+Copy and paste this into your AI coding tool:
 
 ---
 
