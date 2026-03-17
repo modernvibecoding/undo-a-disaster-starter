@@ -1,9 +1,10 @@
 import type { Metadata } from "next";
+import { Navbar } from "@/components/navbar";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Undo a Disaster Cleanly",
-  description: "Starter for the Undo a Disaster Cleanly guided project.",
+  title: "Meridian Systems",
+  description: "Infrastructure monitoring and analytics platform.",
 };
 
 export default function RootLayout({
@@ -13,7 +14,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className="min-h-screen">{children}</body>
+      <body className="min-h-screen">
+        <Navbar />
+        {children}
+      </body>
     </html>
   );
 }
