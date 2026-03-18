@@ -49,7 +49,7 @@ Clone the repo. Run `git log --oneline --graph --all`. You will see a messy hist
 
 ## Complexity Guardrails
 
-- There are 3-4 disaster scenarios in the repo
+- There are exactly 4 disaster scenarios in the repo
 - Each scenario requires a different Git command (revert, reset, reflog, cherry-pick, restore)
 - If you find yourself editing source files, you are solving the wrong problem
 - The entire project should take 45-90 minutes
@@ -66,16 +66,10 @@ Clone the repo. Run `git log --oneline --graph --all`. You will see a messy hist
 
 ## Bite-Sized Steps
 
-1. **Orient** — Run `git log --oneline --graph --all`, `git status`, `git branch -a` to understand the damage
-2. **Disaster 1** — Identify and revert a bad commit on main (use `git revert`)
-3. **Disaster 2** — Recover a deleted/lost branch (use `git reflog` + `git checkout`)
-4. **Disaster 3** — Resolve a bad merge that introduced conflicts (use `git reset` + `git cherry-pick`)
-5. **Verify** — Confirm the app builds, the history is clean, and write the post-mortem
+1. **Orient** — Run `git log --oneline --graph --all`, `git status`, `git branch -a`, `git reflog` to understand the damage
+2. **Disaster 1** — Find and remove a tracked file that should not be tracked (use `git rm --cached` + `.gitignore`)
+3. **Disaster 2** — Identify and revert a bad commit on main (use `git revert`)
+4. **Disaster 3** — Recover a deleted/lost branch (use `git reflog` + `git branch`)
+5. **Disaster 4** — Resolve a bad merge that kept the wrong file version (use `git checkout <hash> -- <file>` or `git reset`)
+6. **Verify** — Confirm the app builds, the history is clean, and write the post-mortem
 
----
-
-## IMPORTANT: This Starter Requires a Rebuild
-
-See `REWORK-PLAN.md`. The current repository does NOT contain pre-staged disaster scenarios. It is a clean baseline with 3 linear commits and no branches. The entire pedagogical content — the git disasters — must be created before this guided project can be used.
-
-Do NOT use this starter in curriculum production until the rework is complete.

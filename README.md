@@ -20,19 +20,11 @@ Open [http://localhost:3000](http://localhost:3000).
 
 ## What to Practice
 
-This repo has a working app and a staged git history. Your job:
+This repo contains a deliberately damaged git history. Your job:
 
-1. Run `git log --oneline` — understand the current state
-2. Introduce a "bad" commit (broken code, wrong merge, deleted file)
-3. Recover cleanly using the correct Git command — no manual file editing
-4. Document what you used and why
+1. Run `git log --oneline --graph --all` — read the history and understand what went wrong
+2. Identify each of the 4 disaster scenarios staged in the repo
+3. Recover each one cleanly using Git commands — no manual file editing
+4. Write a post-mortem documenting what you found and how you fixed it
 
-## Git Recovery Reference
-
-| Situation | Command |
-|---|---|
-| Undo last commit, keep changes | `git reset --soft HEAD~1` |
-| Undo last commit, discard changes | `git reset --hard HEAD~1` |
-| Safely undo a published commit | `git revert <hash>` |
-| Recover a deleted file | `git checkout <hash> -- <file>` |
-| Discard unstaged changes | `git restore <file>` |
+See `docs/disaster-scenario.md` for the full scenario guide.
