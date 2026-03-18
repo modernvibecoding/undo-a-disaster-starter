@@ -36,7 +36,13 @@ This project puts you in that pressure situation. You will learn more about Git 
 
 ## Starting Point
 
-After cloning, run these commands to understand the situation:
+```bash
+git clone https://github.com/modernvibecoding/undo-a-disaster-starter.git
+cd undo-a-disaster-starter
+npm install
+```
+
+Then run these commands to understand the situation:
 
 ```bash
 git log --oneline --graph --all
